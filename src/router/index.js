@@ -13,8 +13,8 @@ export default new Router({
 			path: '/',
 			component: Menu
 		},
-	   	{ 
-	   		path: '/menu', 
+	   	{
+	   		path: '/menu',
 	   		component: Menu,
 	   		children : [{
 	   			path : '/customer-login',
@@ -41,11 +41,13 @@ export default new Router({
 	   			path : '/renthouse',
 	    		// 懒加载
 	    		component : resolve => require(['components/Renthouse.vue'],resolve)
-	    	},{
+	    	},
+				{
 	   			path : '/sellhouse',
 	    		// 懒加载
-	    		component : resolve => require(['components/Sellhouse.vue'],resolve)
-	    	},,{
+	    		component : resolve => require(['components/SellHouse.vue'],resolve)
+	    	},
+				{
 	   			path : '/solicithouse',
 	    		// 懒加载
 	    		component : resolve => require(['components/Solicithouse.vue'],resolve)
